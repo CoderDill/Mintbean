@@ -6,7 +6,7 @@ const db = new pg.Client({
   database: "d25kdq8jhkd5dd",
   port: 5432,
   host: "ec2-23-23-133-10.compute-1.amazonaws.com",
-  ssl: true,
+  ssl: false,
 });
 
 db.connect();
