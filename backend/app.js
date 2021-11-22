@@ -23,7 +23,7 @@ app.use(cors());
 app.use("/users", uRouter);
 app.use("/colorings", cRouter);
 app.get("*", function (req, res) {
-  const index = path.join(__dirname, "build", "index.html");
+  const index = path.join(__dirname, "frontend/build");
   res.sendFile(index);
 });
 // catch 404 and forward to error handler
