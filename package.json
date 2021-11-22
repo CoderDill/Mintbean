@@ -47,7 +47,7 @@
     "server": "node backend/bin/www",
     "client": "cd frontend && react-scripts start",
     "server-with-client": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "cd frontend && npm install && npm run build"
+    "heroku-postbuild": "cd frontend && npm install && npm install concurrently && npm run build"
   },
   "eslintConfig": {
     "extends": [
