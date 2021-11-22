@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.374b79f5.chunk.css",
+    "main.js": "/static/js/main.f01e1bd3.chunk.js",
+    "main.js.map": "/static/js/main.f01e1bd3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.05aee4b1.js",
+    "runtime-main.js.map": "/static/js/runtime-main.05aee4b1.js.map",
+    "static/css/2.58a45539.chunk.css": "/static/css/2.58a45539.chunk.css",
+    "static/js/2.f7419df6.chunk.js": "/static/js/2.f7419df6.chunk.js",
+    "static/js/2.f7419df6.chunk.js.map": "/static/js/2.f7419df6.chunk.js.map",
+    "static/js/3.b9bfd08f.chunk.js": "/static/js/3.b9bfd08f.chunk.js",
+    "static/js/3.b9bfd08f.chunk.js.map": "/static/js/3.b9bfd08f.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.58a45539.chunk.css.map": "/static/css/2.58a45539.chunk.css.map",
+    "static/css/main.374b79f5.chunk.css.map": "/static/css/main.374b79f5.chunk.css.map",
+    "static/js/2.f7419df6.chunk.js.LICENSE.txt": "/static/js/2.f7419df6.chunk.js.LICENSE.txt",
+    "static/media/Elephant.svg": "/static/media/Elephant.a77a487d.svg",
+    "static/media/StoryPaint2.693eb22e.png": "/static/media/StoryPaint2.693eb22e.png",
+    "static/media/cover.svg": "/static/media/cover.8e266e30.svg",
+    "static/media/mickey-beach.svg": "/static/media/mickey-beach.05159bd3.svg",
+    "static/media/octopus.svg": "/static/media/octopus.11b16053.svg",
+    "static/media/page1.svg": "/static/media/page1.4763f0c6.svg",
+    "static/media/page2.svg": "/static/media/page2.7bc8792f.svg",
+    "static/media/peppa_cover.svg": "/static/media/peppa_cover.9ca0fa16.svg",
+    "static/media/peppa_page1.svg": "/static/media/peppa_page1.88494774.svg",
+    "static/media/peppa_page2.svg": "/static/media/peppa_page2.429ec0be.svg",
+    "static/media/peppa_page3.svg": "/static/media/peppa_page3.3fa0ad66.svg",
+    "static/media/peppa_page4.svg": "/static/media/peppa_page4.92766730.svg",
+    "static/media/peppa_page5.svg": "/static/media/peppa_page5.da41f1ce.svg",
+    "static/media/peppa_page6.svg": "/static/media/peppa_page6.902277d8.svg",
+    "static/media/peppa_page7.svg": "/static/media/peppa_page7.f0baaf30.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.05aee4b1.js",
+    "static/css/2.58a45539.chunk.css",
+    "static/js/2.f7419df6.chunk.js",
+    "static/css/main.374b79f5.chunk.css",
+    "static/js/main.f01e1bd3.chunk.js"
+  ]
+}
