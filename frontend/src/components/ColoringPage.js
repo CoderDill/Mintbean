@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import { Box } from "@mui/material";
 import { CirclePicker } from "react-color";
 import "../styles/ColoringPage.css";
@@ -10,6 +10,7 @@ export default function ColoringPage() {
   const colors = [
     "#f44336",
     "#e91e63",
+    "#FFC0CB",
     "#9c27b0",
     "#673ab7",
     "#3f51b5",
@@ -27,6 +28,7 @@ export default function ColoringPage() {
     "#735548",
     "#607db8",
     "#222222",
+    "#808080",
     "#FFFFFF",
   ];
   const availableBooks = ["Random", "Peppa"];

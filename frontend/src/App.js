@@ -1,10 +1,9 @@
 import './App.css';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux'
 import { Modal } from '@mui/material';
 import { ToastContainer, toast } from 'react-toastify';
-import CheckForLSColorings  from './helpers/localStorage'
 import 'react-toastify/dist/ReactToastify.css';
 import LoginForm from './Forms/LoginForm';
 import RegistrationForm from './Forms/RegistrationForm';
@@ -13,7 +12,6 @@ import Navbar from './components/Navbar';
 function App() {
 	const [ isOpenLogin, setIsOpenLogin ] = useState(false);
 	const [ isOpenRegister, setIsOpenRegister ] = useState(false);
-	const [isLoading, setLoading] = useState(true)
 	const dispatch = useDispatch()
 	
 	const user = window.localStorage.getItem("user") || null;

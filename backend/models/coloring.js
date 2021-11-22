@@ -39,8 +39,7 @@ class Coloring {
            WHERE colorings.user_id = $1`,
       [user_id]
     );
-
-    const coloring = results.rows[0];
+    const coloring = results.rows;
 
     if (!coloring) throw new ExpressError(`No colorings`);
 

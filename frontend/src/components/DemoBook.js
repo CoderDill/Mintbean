@@ -1,5 +1,5 @@
 import HTMLFlipBook from 'react-pageflip';
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import SVG from './SVG';
 import '../styles/SVG.css'
 import { useRef, useEffect, useState } from 'react';
@@ -25,8 +25,9 @@ const DemoBook = ({ currentColor, bookName }) => {
 			const image = svgs[key]
 			const name = bookName
 			const res = await postColoringsToAPI(name, image, userId)
-			
+			return res
 		})
+		console.log(res)
 		
 		
 	}

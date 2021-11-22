@@ -46,7 +46,7 @@ export default function Navbar({ toggleLogin, toggleRegister, notify }) {
 						variant="h6"
 						component="div"
 					>
-						<img className="Navbar-logo" src={logo} /> 
+						<img alt="logo" className="Navbar-logo" src={logo} /> 
 					</Typography>
 					{user ? logoutButtons : loginButtons}
 				</Toolbar>

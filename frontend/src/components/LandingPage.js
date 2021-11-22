@@ -1,6 +1,6 @@
-import { Paper, Box, Typography, Button } from "@mui/material";
+import { Box } from "@mui/material";
 import { useNavigate } from "react-router";
-import '../styles/LandingPage.css'
+
 export default function LandingPage() {
   const navigate = useNavigate();
 
@@ -121,6 +121,7 @@ export default function LandingPage() {
                     <img
                       src="./assets/WillSanders.jpg"
                       class="img-thumbnail mb-3"
+                      alt="will-sanders"
                     />
                   </div>
                   <h5 class="text-center">Full Stack Developer</h5>
@@ -136,13 +137,13 @@ export default function LandingPage() {
                     >
                       <i class="fab fa-linkedin fa-2x"></i>
                     </a>
-                    <a class="me-3" href="">
+                    <a class="me-3" href="www.google.com">
                       <i class="fab fa-twitter fa-2x"></i>
                     </a>
                     <a href="https://github.com/Wsanders81" class="me-3">
                       <i class="fab fa-github fa-2x"></i>
                     </a>
-                    <a href="">
+                    <a href="www.google.com">
                       <i class="fab fa-facebook fa-2x"></i>
                     </a>
                   </span>
@@ -153,6 +154,7 @@ export default function LandingPage() {
                     <img
                       src="./assets/JohnQuattrocchi.png"
                       class="img-thumbnail mb-3"
+                      alt="john-quattrochi"
                     />
                   </div>
                   <h5 class="text-center">UX/UI Designer</h5>
