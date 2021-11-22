@@ -7,7 +7,7 @@ import {
 	FormGroup,
 	Box,
 	Button
-} from '@mui/material';
+} from '../components/node_modules/@mui/material';
 import { object, string } from 'yup';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

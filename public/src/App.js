@@ -2,7 +2,7 @@ import './App.css';
 
 import { useState } from 'react';
 import { useDispatch } from 'react-redux'
-import { Modal } from '@mui/material';
+import { Modal } from './components/node_modules/@mui/material';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import LoginForm from './Forms/LoginForm';
