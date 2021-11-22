@@ -45,7 +45,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "node backend/bin/www",
+    "server": "node backend/app.js",
     "client": "cd frontend && react-scripts start",
     "server-with-client": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "cd frontend && npm install && npm install concurrently && npm run build"
