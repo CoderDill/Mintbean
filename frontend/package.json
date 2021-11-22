@@ -33,13 +33,13 @@
   },
   "proxy": "http://localhost:3000",
   "scripts": {
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "start": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "node backend/bin/www",
     "client": "react-scripts start",
-    "server-with-client": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+    "server-with-client": "concurrently --kill-others-on-fail \"yarn run server\" \"yarn run client\""
   },
   "eslintConfig": {
     "extends": [
