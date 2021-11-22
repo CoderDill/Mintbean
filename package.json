@@ -47,8 +47,7 @@
     "eject": "react-scripts eject",
     "server": "node backend/bin/www",
     "client": "cd frontend && react-scripts start",
-    "server-with-client": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    
+    "server-with-client": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "eslintConfig": {
     "extends": [

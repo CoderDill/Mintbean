@@ -1,0 +1,11 @@
+.page {
+    pointer-events: none;
+    display: flex; 
+    flex-wrap: wrap;
+
+}
+
+.page svg {
+     
+    margin: auto; 
+}
