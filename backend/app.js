@@ -22,10 +22,10 @@ app.use(express.static(path.join(__dirname, "frontend/build")));
 app.use(cors());
 app.use("/users", uRouter);
 app.use("/colorings", cRouter);
-app.get("*", function (req, res) {
-  const index = path.join(__dirname, "frontend/build");
-  res.sendFile(index);
-});
+// app.get("*", function (req, res) {
+//   const index = path.join(__dirname, "frontend/build");
+//   res.sendFile(index);
+// });
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
