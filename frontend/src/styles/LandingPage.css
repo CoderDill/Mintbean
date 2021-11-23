@@ -1,0 +1,27 @@
+#carouselDevelopers img {
+    width: 250px;
+}
+
+#title{
+    width: 600px;
+}
+
+#express {
+    width: 50px;
+}
+
+.LandingPage { 
+    background: url("../assets/LandingPage/BackgroundRainbow.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+li {
+    list-style-type: none;
+}

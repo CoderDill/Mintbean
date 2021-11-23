@@ -1,11 +1,11 @@
-.MyPictures-container {
+.MyPictures {
     display: flex; 
     flex-wrap: wrap;
 }
 
-.MyPictures svg{
+.MyPictures-svg{
     pointer-events: none;
-    width: 3rem; 
+    width: 20rem; 
 
 }
 

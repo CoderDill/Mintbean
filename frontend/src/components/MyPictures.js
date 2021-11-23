@@ -1,17 +1,19 @@
 import '../styles/MyPictures.css';
 import { useSelector } from 'react-redux';
 import { useEffect, useRef, useState } from 'react';
-import { getUserColoringsFromAPI } from '../actions/actions';
+import {
+	getUserColoringsFromAPI,
+	deleteColoringFromAPI
+} from '../actions/actions';
+import { useNavigate } from 'react-router-dom';
 import { Box, Button } from '@mui/material';
 import * as saveSvgAsPng from 'save-svg-as-png';
-
 export default function MyPictures() {
-  const INITIAL_STATE = {SVGS:[]}
 	const userId = useSelector((store) => store.userReducer.id);
 	const svgs = useRef(null);
+	const navigate = useNavigate();
 	const [ isLoading, setLoading ] = useState(true);
-  const [svgEls, setSvgEls] = useState(INITIAL_STATE)
-
+	const [ colorings, setColorings ] = useState(null);
 	useEffect(
 		() => {
 			const getColorings = async () => {
@@ -24,50 +26,52 @@ export default function MyPictures() {
 
 					const svgEl = document.createElement('svg');
 					svgEl.innerHtml = image;
-          
+
 					return { image: image, id: svg.id, name: svg.name };
 				});
-        if(svgs.current !== null) setLoading(false)
+				setColorings(svgs.current);
+				if (svgs.current !== null) setLoading(false);
 			};
 			getColorings();
-      
-
 		},
-		[userId]
+		[ userId, isLoading ]
 	);
-	
-  const click = function(e){
-    const svg = e.target.closest('div')
-    const selectedSvg = svg.querySelector('.SVG')
-    const name = selectedSvg.dataset.name
-    saveSvgAsPng.saveSvg(selectedSvg, name )
-    console.log(name)
-    }
-  const buttons = document.querySelectorAll('button')
-  buttons.forEach(button => button.addEventListener("click", click))
-  
-	if (isLoading) return <h1>Loading...</h1>;
-  const createElement = (string)=>{
-   
-    const svgEl = document.createElement('div')
-    const button = document.createElement('button')
-    button.classList.add("MyPictures-button")
-    button.textContent = "Download"
-    svgEl.innerHTML = string
-    svgEl.setAttribute("width", "20rem")
-    svgEl.classList.add("MyPictures-svg")
-    
-    svgEl.append(button)
-    document.querySelector('.MyPictures-container').append(svgEl)
-    
-    return svgEl
-  } 
-  const svgElements = svgs.current.map(el => createElement(el.image))
-  
-  // console.log(svgs.current, svgElements)
+
+	const handleClick = (e) => {
+		const div = e.target.closest('div');
+		const childDiv = div.firstChild;
+		const svg = childDiv.firstChild;
+		const name = svg.dataset.name;
+		saveSvgAsPng.saveSvg(svg, name);
+	};
+	const handleDelete = async (e) => {
+		const res = await deleteColoringFromAPI(e.target.dataset.id);
+
+		setLoading(true);
+		setLoading(false);
+	};
 	return (
-		<div className="MyPictures">
-			
-		</div>
+		<Box className="MyPictures">
+			{svgs.current ? (
+				svgs.current.map((el) => (
+					<Box>
+						<div
+							className="MyPictures-svg"
+							dangerouslySetInnerHTML={{ __html: el.image }}
+						/>
+						<Button onClick={handleClick} variant="contained">
+							Download
+						</Button>
+						<Button
+							data-id={el.id}
+							onClick={handleDelete}
+							variant="contained"
+						>
+							Delete
+						</Button>
+					</Box>
+				))
+			) : null}
+		</Box>
 	);
 }
