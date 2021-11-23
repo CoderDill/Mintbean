@@ -1,3 +1,4 @@
+import { heroku_dev_db } from "./config";
 const pg = require("pg");
 
 const db = new pg.Client({
@@ -6,6 +7,7 @@ const db = new pg.Client({
   ssl: { rejectUnauthorized: false },
   port: 5432,
   user: "jwidpezbkdtmet",
+  password: heroku_dev_db,
 });
 
 db.connect();
