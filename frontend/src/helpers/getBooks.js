@@ -17,6 +17,12 @@ const PeppaText = [
   "Good thing Peppa and George LOVE jumping up and down in muddy puddles!",
   "Oh my goodness! Wow! So much mud!. Splish, Splash, Splosh, Splish, Splash. The End.",
 ];
+const GMText = [
+  "", 
+  "",
+  "",
+  ""
+]
 // const className = ((i + 1) % 2 ) === 0 ? "left" : "right"
 
 export function getBooks(bookName) {
@@ -58,5 +64,23 @@ export function getBooks(bookName) {
       });
     }
     return Peppa;
+  } else if(bookName === "goodnightMoon"){
+    const GMsvgs = require.context(`../assets/images/GoonightMoon`, true, /\.svg$/);
+    const GMArr = GMsvgs.keys().map((path) => ({
+      path,
+      file: GMsvgs(path),
+    }));
+    const GM = [];
+
+    for (let i = 0; i < GMArr.length; i++) {
+      const className = (i + 1) % 2 !== 0 ? "left" : "right";
+      GM.push({
+        path: GMArr[i].path,
+        text: GMText[i],
+        className: className,
+      });
+    }
+    
+    return GM
   }
 }

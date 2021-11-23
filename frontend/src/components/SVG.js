@@ -4,6 +4,16 @@ import { useDispatch} from 'react-redux'
 import * as saveSvgAsPng from 'save-svg-as-png';
 import 'external-svg-loader';
 import '../styles/SVG.css';
+const goodnightMoon_blank = require('../assets/images/GoonightMoon/goodnightMoon_blank.svg')
+const goodnightMoon_cover = require('../assets/images/GoonightMoon/goodnightMoon_cover.svg')
+const goodnightMoon_page1 = require('../assets/images/GoonightMoon/goodnightMoon_page1.svg')
+const goodnightMoon_page2 = require('../assets/images/GoonightMoon/goodnightMoon_page2.svg')
+const goodnightMoon = {
+	goodnightMoon_blank: goodnightMoon_blank,
+	goodnightMoon_cover: goodnightMoon_cover, 
+	goodnightMoon_page1: goodnightMoon_page1, 
+	goodnightMoon_page2: goodnightMoon_page2, 
+}
 const SVG = ({
 	name,
 	currentColor, 
@@ -11,18 +21,32 @@ const SVG = ({
 	text, 
 	pageClass
 }) => {
+	
 	const dispatch = useDispatch()
 	const svgRef = useRef(null);
 	const filename = 'mycreation.svg';
 	const ImportedIconRef = useRef(null);
 	const [ loading, setLoading ] = useState(false);
+	const [toggle, setToggle] = useState(true)
+	const handleToggle = () => {
+		setToggle(prevState => !prevState)
+	}
 	useEffect(
 		() => {
 			setLoading(true);
 			const importIcon = async () => {
 				try {
+					if(bookName === "goodnightMoon"){
+						
+						const namedImport = goodnightMoon[name]
+						ImportedIconRef.current = namedImport.default
+						console.log(namedImport.default)
+						handleToggle()
+					} else {
 					const namedImport = await import(`../assets/images/${bookName}/${name}.svg`);
 					ImportedIconRef.current = namedImport.default;
+					console.log(namedImport.default)
+					}
 				} catch (err) {
 					throw err;
 				}

@@ -27,7 +27,7 @@ const DemoBook = ({ currentColor, bookName }) => {
 			const res = await postColoringsToAPI(name, image, userId)
 			return res
 		})
-		console.log(res)
+		
 		
 		
 	}

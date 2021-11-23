@@ -31,7 +31,7 @@ export default function ColoringPage() {
     "#808080",
     "#FFFFFF",
   ];
-  const availableBooks = ["Random", "Peppa"];
+  const availableBooks = ["Random", "Peppa", "goodnightMoon" ];
   const handleBookChange = (e) => {
     setBook(e.target.value);
   };
@@ -53,7 +53,7 @@ export default function ColoringPage() {
         </Box>
         
           <Paper
-            elevation="9"
+            elevation={5}
             sx={{
               margin: "auto",
               width: "75%",
