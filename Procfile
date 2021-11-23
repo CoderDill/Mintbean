@@ -1,1 +1,2 @@
-web: npm run server-with-client
+web: npm run client
+server: cd backend && npm install && npm start
