@@ -1,6 +1,14 @@
 import { Box } from "@mui/material";
 import { useNavigate } from "react-router";
+import "../styles/LandingPage.css"
 
+//images
+import Matt from '../assets/LandingPage/MattDillon.jpg'
+import Will from '../assets/LandingPage/WillSanders.jpg'
+import John from '../assets/LandingPage/JohnQuattrocchi.png'
+import Express from '../assets/LandingPage/ExpressJS.png'
+import Crayons from '../assets/LandingPage/Crayons.jpg'
+import StoryPaint from '../assets/LandingPage/StoryPaint2.png'
 export default function LandingPage() {
   const navigate = useNavigate();
 
@@ -11,10 +19,10 @@ export default function LandingPage() {
     navigate("/login");
   };
   return (
-    <Box sx={{ paddingTop: "10rem" }}>
+    <Box className="LandingPage" sx={{ paddingTop: "10rem" }}>
       <div class="container-fluid">
         <div class="d-flex justify-content-center LandingPage-logo">
-          <img id="title" src="/assets/StoryPaint2.png" alt="" />
+          <img id="title" src={StoryPaint} alt="" />
         </div>
         <div class="row"></div>
       </div>
@@ -86,7 +94,7 @@ export default function LandingPage() {
                   <h4 class="text-center">Matt Dillon</h4>
                   <div class="d-flex justify-content-center">
                     <img
-                      src="./assets/MattDillon.jpg"
+                      src={Matt}
                       class="img-thumbnail mb-3"
                       alt="Missing"
                     />
@@ -119,7 +127,7 @@ export default function LandingPage() {
                   <h4 class="text-center">Will Sanders</h4>
                   <div class="d-flex justify-content-center">
                     <img
-                      src="./assets/WillSanders.jpg"
+                      src={Will}
                       class="img-thumbnail mb-3"
                       alt="will-sanders"
                     />
@@ -152,7 +160,7 @@ export default function LandingPage() {
                   <h4 class="text-center">John Quattrocchi Jr.</h4>
                   <div class="d-flex justify-content-center">
                     <img
-                      src="./assets/JohnQuattrocchi.png"
+                      src={John}
                       class="img-thumbnail mb-3"
                       alt="john-quattrochi"
                     />
@@ -240,7 +248,7 @@ export default function LandingPage() {
               </span>
             </li>
             <li>
-              <img id="express" src="ExpressJS.png" alt="" />
+              <img id="express" src={Express} alt="" />
               Express.js
             </li>
             <li>Node-postgres</li>
