@@ -1,6 +1,0 @@
-export const GET_USER = "GET_USER"
-
-export const LOGOUT = "LOGOUT"
-export const POST_COLORING = "POST_COLORING"
-export const GET_COLORING = "GET_COLORING"
-export const ADD_COLORING_TO_STATE= "ADD_COLORING_TO_STATE"
