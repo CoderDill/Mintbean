@@ -1,12 +1,12 @@
 import { useState} from "react";
-import { Box } from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 import { CirclePicker } from "react-color";
 import "../styles/ColoringPage.css";
 import DemoBook from "./DemoBook";
 import PictureSelect from "./PictureSelect";
 export default function ColoringPage() {
   const [currentColor, setCurrentColor] = useState("white");
-  const [book, setBook] = useState("Random");
+  const [book, setBook] = useState("Peppa");
   const colors = [
     "#f44336",
     "#e91e63",
@@ -51,9 +51,9 @@ export default function ColoringPage() {
             availableBooks={availableBooks}
           />
         </Box>
-        <Box sx={{ width: "100%", textAlign: "center" }}>
-          <Box
-
+        
+          <Paper
+            elevation="9"
             sx={{
               margin: "auto",
               width: "75%",
@@ -71,9 +71,10 @@ export default function ColoringPage() {
               color={currentColor}
               onChangeComplete={handleChangeColor}
             />
-          </Box>
+            <Typography className="ColoringPage-text" >Choose a Color</Typography>
+          
 
-        </Box>
+        </Paper>
       </Box>
       <Box
         sx={{
