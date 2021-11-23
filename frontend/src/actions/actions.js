@@ -61,6 +61,14 @@ export async function getUserColoringsFromAPI(user_id){
 	})
 	return response.data
 }
+
+export async function deleteColoringFromAPI(id){
+	const response = await axios({
+		method:"delete", 
+		url: `${BASE_URL}/colorings/${id}`
+	})
+	return response
+}
 // function getPost(post) {
 //     return {
 //         // type: GET_POST,

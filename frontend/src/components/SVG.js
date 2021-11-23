@@ -46,6 +46,7 @@ const SVG = ({
 				<svg
 					onClick={handleClick}
 					ref={svgRef}
+					data-name={name}
 					id="my-svg"
 					className="SVG"
 					data-src={`${ImportedIconRef.current}`}

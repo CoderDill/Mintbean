@@ -1,0 +1,16 @@
+.MyPictures-container {
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+.MyPictures svg{
+    pointer-events: none;
+    width: 3rem; 
+
+}
+
+
+
+.MyPictures-button {
+    padding: 0.25rem; 
+}
