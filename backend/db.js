@@ -1,4 +1,4 @@
-import { heroku_dev_db } from "./config";
+const heroku_dev_db = require("./config");
 const pg = require("pg");
 
 const db = new pg.Client({
